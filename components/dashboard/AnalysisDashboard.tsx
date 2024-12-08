@@ -13,7 +13,7 @@ export const AnalysisDashboard = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <WalletOverview />
 
-        <RecentTransactions />
+        {/* <RecentTransactions /> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
           <RequestCategories />

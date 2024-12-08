@@ -17,6 +17,7 @@ const createRequestClient = (provider: providers.Web3Provider) => {
 // A function that fetches and processes requests for the given Ethereum address
 export const getRequestsForAddress = async (address: string) => {
   // Initialize a Web3 provider for the current Ethereum window
+  // @ts-ignore
   const provider = new providers.Web3Provider(window.ethereum);
 
   // Create a RequestClient instance
