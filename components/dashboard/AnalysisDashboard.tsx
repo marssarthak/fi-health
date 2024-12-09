@@ -7,7 +7,13 @@ import { PaymentPatterns } from "./PaymentPatterns";
 import { WalletOverview } from "./WalletOverview";
 import { RecentTransactions } from "./RecentTranstion";
 
-export const AnalysisDashboard = () => {
+export const AnalysisDashboard = ({
+  requests,
+}: {
+  requests: any[];
+}) => {
+
+  console.log(requests);
   return (
     <div className="min-h-screen pt-20 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">

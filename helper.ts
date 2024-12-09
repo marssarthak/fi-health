@@ -29,6 +29,8 @@ export const getRequestsForAddress = async (address: string) => {
     value: address,
   });
 
+  console.log(requests)
+
   // Map the requests to a simpler summary format
   const requestSummaries = requests.map((request) => {
     const requestData = request.getData();

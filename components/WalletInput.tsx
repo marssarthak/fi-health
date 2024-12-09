@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Plus, X, Wallet } from "lucide-react";
 import { getRequestsForAddress } from "@/helper";
 
-export const WalletInput = () => {
+export const WalletInput = ({setAddresses} : {setAddresses: (ad: string[]) => void}) => {
   const [wallets, setWallets] = useState<string[]>([""]);
 
   const addWallet = () => {
@@ -58,7 +58,8 @@ export const WalletInput = () => {
 
         <button
           onClick={() =>
-            getRequestsForAddress("0x1526d2B6d07C6661D71Be58d92A4F088d36C8FfD")
+            setAddresses(wallets.filter((wallet) => wallet.length > 0))
+            // getRequestsForAddress("0x1526d2B6d07C6661D71Be58d92A4F088d36C8FfD")
           }
           className="flex-1 bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors glow"
         >

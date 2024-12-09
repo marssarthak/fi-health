@@ -2,7 +2,9 @@ import React from "react";
 import { BarChart3, Brain, Wallet, Boxes } from "lucide-react";
 import { WalletInput } from "./WalletInput";
 
-export const Hero = () => {
+export const Hero = ({
+  setAddresses
+}: {setAddresses: (ad: string[]) => void}) => {
   return (
     <div className="pt-32 pb-20 blockchain-grid">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -27,7 +29,7 @@ export const Hero = () => {
             </p>
 
             <div className="max-w-xl mx-auto mb-16 relative">
-              <WalletInput />
+              <WalletInput setAddresses={setAddresses} />
               <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 text-sm text-gray-500">
                 Supported chains: Ethereum, Polygon, BSC, Arbitrum, Optimism
               </div>
